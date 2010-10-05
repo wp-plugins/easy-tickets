@@ -26,9 +26,11 @@ ET allows your users to submit their support tickets for a product/problem/etc v
 3. Create new page template, namig it `easy-tickets-page.php` and adding the `/*
 Template Name: Tickets
 */` header, then fill it with loop data as shown in the enclosed `easy-tickets-page-example.php` file.
-Create a Wordpress Page, and set 'Tickets' its template.  
-4. If your theme does not use native comment form, insert in the said created page template
-the example form from the provided `easy-tickets-form-example.php` file. 
+Create a Wordpress Page, and set 'Tickets' as its template.  
+4. In your current theme folder create file named `single-ticket.php` and fill it with data like in the enclosed
+`single-ticket.php` file.
+5. If your theme does not use native comment form, insert in the said created templates
+the example form as described in the enclosed files.
 
 == Screenshots ==
 

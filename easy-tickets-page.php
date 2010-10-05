@@ -72,7 +72,41 @@ Template Name: Tickets
 //load temp page data
 $post = $tmp_post; 
 
-comment_form(); ?>
+comment_form();
+
+/*if your theme uses custom comment form,
+ * replace the comment_form() call in the page or comments teplate with something like the following
+ * (beware of summary and description input field names and form and submit buttn ID's):
+ */
+
+/* start */
+?>
+<h3>If you'd like to report a new ticket, please fill in the form below.</h3>
+<div id="result"></div><br/>
+<p class="comment-notes" style="margin-bottom:0;">Required fields are marked with *</p>
+<form id="et_page_add_form" method="post" action="">
+
+<p class="comment-form-title">
+	<label for="email">Problem summary</label> <span class="required">*</span>
+	<input id=title" name="ticket_summary" type="text" value="" size="30" />
+</p>
+
+<p class="comment-form-description">
+	<label for="description">Problem description</label> <span class="required">*</span> 
+	<textarea id="description" name="ticket_description" cols="45" rows="8"></textarea>
+</p>		
+
+<?php
+//for reCaptcha
+do_action('comment_form');
+?>
+
+<p class="form-submit">
+	<input type="submit" value="Report" id="et_page_add_send"/>
+</p>
+</form>
+<?php /* end */?>
+
 </div>	
 	<?php else : ?>
 
